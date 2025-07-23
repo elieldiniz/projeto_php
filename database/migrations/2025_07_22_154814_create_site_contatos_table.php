@@ -11,18 +11,18 @@ class CreateSiteContatosTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('site_contatos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('nome', 50);
-            $table->string('email', 80);
-            $table->string('telefone', 20);
-            $table->integer('motivo_contato',50);
-            $table->text('mensagem',50);
-        });
-    }
+public function up()
+{
+    Schema::create('site_contatos', function (Blueprint $table) {
+        $table->id(); // id autoincrement primária
+        $table->string('nome', 50);
+        $table->string('email', 80);
+        $table->string('telefone', 20);
+        $table->integer('motivo_contato'); // apenas integer, sem tamanho
+        $table->text('mensagem'); // text não recebe tamanho
+        $table->timestamps(); // geralmente no fim
+    });
+}
 
     /**
      * Reverse the migrations.
