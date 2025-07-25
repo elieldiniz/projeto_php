@@ -1,5 +1,5 @@
 <?php
-
+//ORM ELOQUENT
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;

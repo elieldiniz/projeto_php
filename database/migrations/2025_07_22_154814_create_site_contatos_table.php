@@ -18,7 +18,7 @@ public function up()
         $table->string('nome', 50);
         $table->string('email', 80);
         $table->string('telefone', 20);
-        $table->integer('motivo_contato'); // apenas integer, sem tamanho
+        $table->string('motivo_contato'); // apenas integer, sem tamanho
         $table->text('mensagem'); // text não recebe tamanho
         $table->timestamps(); // geralmente no fim
     });
