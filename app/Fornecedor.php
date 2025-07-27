@@ -3,11 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 //ja fornecedor fica errado essa tabela nao exitiria ficaria fornecedors 
 //prem paraajusra podemos criar protected $table = 'fornecedores';
 class Fornecedor extends Model
 {
+
+    use SoftDeletes; //para usar soft delete, ou seja, deletar sem excluir do banco de dados
     
     //definindo o nome da tabela
     //isso e importante porque o laravel por padrao procura a tabela no plural
@@ -28,4 +30,5 @@ class Fornecedor extends Model
     ];
 
     
+
 }

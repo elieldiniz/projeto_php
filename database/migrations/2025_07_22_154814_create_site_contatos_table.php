@@ -17,7 +17,7 @@ public function up()
         $table->id(); // id autoincrement primária
         $table->string('nome', 50);
         $table->string('email', 80);
-        $table->string('telefone', 20);
+        $table->string('telefone', 50);
         $table->string('motivo_contato'); // apenas integer, sem tamanho
         $table->text('mensagem'); // text não recebe tamanho
         $table->timestamps(); // geralmente no fim

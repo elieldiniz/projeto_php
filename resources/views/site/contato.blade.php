@@ -11,11 +11,14 @@
 
             <div class="informacao-pagina">
                 <div class="contato-principal">
+                    
 
                     {{-- o include do form_contato.blade.php é utilizado para incluir o formulario de contato na pagina --}}
                     {{-- o include é utilizado para incluir o formulario de contato na pagina --}}
-                    @component('site.layouts._components.form_contato',['classe'=> 'borda-preta'])
+
+                    @component('site.layouts._components.form_contato',['classe'=> 'borda-preta', 'motivo_contato'=> $motivo_contato ?? ''])
                         {{--Inclui no form as informaçoes a baixo  com varivael {{ $slot }} --}}
+
                     <p>A nossa equipe analisará a mensagem</p>
                     <p>e retornará o mais breve possível.</p>
                     @endcomponent
@@ -41,4 +44,6 @@
                 <img src="img/mapa.png">
             </div>
         </div>
+    </body>
 @endsection
+
