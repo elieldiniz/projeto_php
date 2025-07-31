@@ -27,6 +27,8 @@ class LogAcessoMiddleware
 
         $response->setStatusCode(201 ,'O status da resposta e p yexyo da resposta foram modificados');
 
+       // $logs = LogAcesso::all();
+
         return $response; // Return the response to continue the request lifecycle
         //return Response("Acesso registrado com sucesso! <br> IP: $ip <br> Rota: $rota <br> Log: $logs");
 

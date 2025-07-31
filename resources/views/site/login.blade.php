@@ -16,13 +16,16 @@
                 <form action="{{ route('site.login') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <input name='usuario' type="text"  class="borda-preta" required>
-
-                        <input name='senha' type="password" class="borda-preta" required>
-
+                        <input name='usuario' value="{{ old('usuario') }}" type="text"  class="borda-preta" required>
+                        {{ $errors->has('usuario') ? $errors->first('usuario') : '' }}
+                        <input name='senha' value="{{ old('senha') }}" type="password" class="borda-preta" required>
+                        {{ $errors->has('senha') ? $errors->first('senha') : '' }}
                         <button type="submit" class="borda-preta">acessar</button>
                     </div> 
                 </form>
+
+                {{isset($erro) && $erro == 1 ? 'Usuário e/ou senha não existem' : '' }}
+             
             </div>
         </div>
 
